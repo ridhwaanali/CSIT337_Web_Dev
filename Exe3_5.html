@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise 3.5</title>
+<style>
+ {
+width: 1000px;
+height: 1000px;
+position: absolute;
+background: white;
+
+}
+ {
+width: 30px;
+height: 60px;
+position: absolute;
+background-color: red;
+top: 0px;
+left: 0px;
+opacity: 1;
+}
+ {
+width: 30px;
+height: 60px;
+position: absolute;
+background-color: green;
+top: 0px;
+left: 200px;
+opacity: 1;
+}
+
+ {
+width: 30px;
+height: 60px;
+position: absolute;
+background-color: cyan;
+top: 400px;
+left: -200px;
+opacity: 1;
+}
+
+ {
+width: 30px;
+height: 60px;
+position: absolute;
+background-color: yellow;
+top: 0px;
+left: 200px;
+opacity: 1;
+}
+</style>
+<body>
+
+<p>
+<button onclick="myMove()">Click Me</button>
+</p>
+
+<div id ="myContainer">
+<div id ="myAnimation1">
+<div id ="myAnimation2">
+<div id ="myAnimation3">
+<div id ="myAnimation4">
+</div>
+
+</div>
+
+<script>
+function myMove() {
+var elem1 = document.getElementById("myAnimation1");
+var elem2 = document.getElementById("myAnimation2");
+var elem3 = document.getElementById("myAnimation3");
+var elem4 = document.getElementById("myAnimation4");
+var posw1 = 0;
+var posh1 = 0;
+var posw2 = 200;
+var posh2 = 0;
+var posw3 = -200;
+var posh3 = 400;
+var posw4 = 200;
+var posh4 = 0;
+
+var id = setInterval(frame, 10);
+function frame() {
+if (posh1 == 170) {
+clearInterval(id);
+} else {
+posh1=posh1+1;
+posw1=posw1+2;
+  
+posw2--;
+posh3--;posh3--;
+posw3++;
+posw4--;
+elem1.style.top = posh1 + 'px';
+elem1.style.left = posw1 + 'px';
+elem2.style.top = posh2 + 'px';
+elem2.style.left = posw2 + 'px';
+elem3.style.top = posh3 + 'px';
+elem3.style.left = posw3 + 'px';
+elem4.style.top = posh4 + 'px';
+elem4.style.left = posw4 + 'px';
+  
+elem1.style.opacity=(250-posh1)/250;
+  
+  
+}
+}
+}
+</script>
+
+</body>
+</html>

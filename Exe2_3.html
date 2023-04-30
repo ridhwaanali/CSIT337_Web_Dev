@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise2.3</title>
+<style>
+    input{
+      /*
+      Default Input Element property
+      */
+      height: 20px;
+      width: 300px;
+    }
+    button{
+      /*
+      Default Button Element Property
+      */
+      height: 30px;
+      width: 80px;
+    }
+    input:focus {
+      /*
+        These Rules will be applied when the input element gets focus
+      */
+      background-color: yellow;
+      height: 50px;
+      width: 500px;
+    }
+    input:hover{
+      /*
+        These Rules will be applied when the input element gets hovered
+      */
+      background-color: cyan;
+      height: 50px;
+      width: 500px;
+    }
+    button:focus {
+      /*
+        These Rules will be applied when the button element gets focus
+      */
+      background-color: yellow;
+      height: 50px;
+      widht: 100px;
+    }
+    button:hover{
+      /*
+        These Rules will be applied when the button element gets hovered
+      */
+      background-color: cyan;
+      height: 50px;
+      width: 100px;
+    }
+</style>
+</head>
+<body>
+    <form>
+      <label for="lastname">LastName:
+      </label>
+      <input type = "text" name="lastname"> </br>
+<label for="firstname">FirstName:
+      </label>
+      <input type = "text" name="firstname"> </br>
+<label for="email">E-mail Address:
+      </label>
+      <input type = "email" name="email"> </br>
+<button type = "submit"> Submit</button>
+<button type = "reset"> Clear</button>
+</form>
+</body>
+</html>
